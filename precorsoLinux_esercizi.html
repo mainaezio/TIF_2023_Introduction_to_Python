@@ -38,7 +38,7 @@ Per gli utenti Windows "Aprire un terminale" deve essere inteso come aprire un t
     <LI> Verificate con <B>pwd</B> l'indirizzo della cartella home
     <LI> Verificate con <B>which curl</B> che il programma curl sia installato. Se lo &egrave; avrete una risposta  simile a /...../bin/curl. In caso contrario la risposta sar&agrave; il solo prompt. In questo caso installate <B>curl</B> dando il comando<BR>
         <B>sudo apt install curl</B><BR>
-     Vi verrà richiesta la password.
+     Vi verr&agrave; richiesta la password.
     <LI> Date il comando<BR>
      <B>curl "http://personalpages.to.infn.it/~maina/test_FileSystem/test_FileSystem.tar.gz" --output FS.tar.gz</B><BR>
      Il comando curl scarica il file test_FileSystem.tar.gz dal server remoto e lo salva localmente come FS.tar.gz
@@ -63,8 +63,28 @@ drwxr-xr-x    7 maina  staff       224 Aug 10 19:09 phantom
 </UL>
 Congratulazioni!<BR>
 <UL>
-    <LI> Date il comando <B>ls bin</B> per vedere la lista dei fuile nella cartella <B>bin</B>.
+    <LI> Date il comando <B>ls bin</B> per vedere la lista dei file nella cartella <B>bin</B>.
     <LI> Usate il comando <B>cd</B> per spostarvi nella cartells <B>bin</B>.
+    <LI> Usate il comando <B>cp</B> per copiare il file <B>ZZWW.frm</B> in un file <B>pippo.lol</B>
+    <LI> Usate il comando <B>man</B> per cercare informazioni sul comando <B>diff</B>.
+    <LI> Usate il comando <B>diff</B> per verificare che <B>ZZWW.frm</B> e <B>pippo.lol</B> sono identici.
+    <LI> Date il comando <B>echo pluto >> pippo.lol</B>
+    <LI> Verificate usando il comando  <B>tail pippo.lol</B> che il comando precedente abbia aggiunto "pluto" al fondo di <B>pippo.lol</B>
+    <LI> Usate il comando <B>diff</B> per verificare le differenze fra <B>ZZWW.frm</B> e <B>pippo.lol</B>
+    <LI> Cancellate <B>pippo.lol</B> usando il comando <B>rm</B>
+    <LI> Usate il comando <B>cp</B> per copiare la cartella <B>form</B> in una cartella <B>pippo</B>.
+        Come mai non funziona?
+    <LI> Usate il comando <B>cp -r</B> per copiare la cartella <B>form</B> in una cartella <B>pippo</B>.
+    <LI> Usate il comando <B>diff</B> per verificare che <B>form</B> e <B>pippo</B> sono identiche.
+    <LI> Usate il comando <B>rm</B> per cancellare il file README.md da <B>pippo</B>.
+    <LI> 
+    <LI> Usate il comando <B>diff</B> per verificare le differenze fra <B>form</B> e <B>pippo</B>
+    <LI> Usate il comando <B>rm</B> per eliminare la cartella <B>pippo</B>.
+        Come mai non funziona?
+    <LI> Usate il comando <B>man</B> per cercare informazioni sul comando <B>rm</B>.
+    <LI> Usate il comando <B>rm -rf</B> per eliminare la cartella <B>pippo</B>.
+
+
 </UL>
 <P>
 &nbsp;
