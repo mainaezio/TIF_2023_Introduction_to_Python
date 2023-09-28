@@ -85,8 +85,6 @@ Congratulazioni!<BR>
         Come mai non funziona?
     <LI> Usate il comando <B>man</B> per cercare informazioni sul comando <B>rm</B>.
     <LI> Usate il comando <B>rm -rf</B> per eliminare la cartella <B>pippo</B>.
-
-
 </UL>
 <P>
 &nbsp;
@@ -128,6 +126,37 @@ Congratulazioni!<BR>
         <B>Humour</B> il cui nome inizi con <B>Ca</B> nella cartella <B>Humour</B>. Verificate con <B>ls</B> che
         l'operazione sia andata a buon fine.
     <LI> cancellate la cartella <B>pluto</B> e tutti i file che contiene
+    <LI> Tornate alla cartella home
+    <LI> Date il comando <B>find ./ -name micro</B><BR>
+        Il comando cerca tutti i file e cartelle il cui nome &egrave; <B>micro</B> (-name micro).
+        La ricerca esamina la
+         cartella in cui sono e in tutte le cartelle sottostanti (./ &egrave; la cartella in cui sono)
+    <LI> Usate il comando <B>find</B> per cercare il file <B>Makefile</B> nella cartella bin/form
+    <LI> &Egrave; possibile fornire a <B>find</B> l'indizzo assoluto della cartella da cui iniziare la ricerca:
+        <BR>
+        <B>find /usr/bin -name curl</B>
+    <LI> Anche con <B>find</B> &egrave; possibile usare delle wildcard. In questo caso il nome dei file da
+        cercare va chiuso fra virgolette:<BR>
+        <B>find /usr/bin -name "cu*"</B><BR>
+        <B>find ./ -name "*bash*"</B>
+    <LI> Date il comando <B>man find</B> e esaminate il risultato. Si, &egrave; un po' complicato
+    <LI> Nel vostro browser preferito cercate <B>linux find</B>. Aprite le prime pagine della risposta.
+        Il web &egrave; una grande risorsa per tutti i problemi di programmazione. Non sempre &egrave;
+        immediato trovare esattamente quello che serve.
+    <LI> Il comando <grep> cerca una serie di caratteri all'interno dei file.<BR>
+        Dalla vostra cartella home date il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B>.<BR>
+        Il comando mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>
+    <LI> I comandi di <B>bash</B> possono essere concatenati passando l'output del primo al secondo e cos&igrave;
+        via. Per esempio nella vostra home date il comando <B>ls -al</B>. Il risultato pu&ograve; essere passato
+         come input a <B>grep</B> per estrarre solo le cartelle per cui la riga contiene "drwx". Si usa il
+          simbolo <B>|</B> (barra verticale):<BR>
+        <B>ls -al | grep drwx</B>
+    <LI> Date il comando <B>man grep</B> e esaminate il risultato. Si, anche questo &egrave; un po' complicato
+    <LI> Nel vostro browser preferito cercate <B>linux grep</B>. Aprite le prime pagine della risposta.
+    <LI> Possiamo concatenare <B>grep</B> con se stesso per raffinare una ricerca. Date il comando 
+        <B>grep lhapdf phantom/COMANDI_GCC.txt | grep home</B>.<BR>
+        Il comando mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>. Il
+       risultato viene passato nuovamente a <B>grep</B> per selezionare le linee che contengono anche <B>home</B>.
 </UL>
 
 <P>
