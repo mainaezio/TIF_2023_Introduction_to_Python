@@ -14581,7 +14581,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <H1 style="font-size:50px">4: Control Flow</H1><div style = "width:95%; padding:5px 10px 5px;  margin:50px 0px 10px 10px; font-size:18px">
 <UL>
-    <LI> Cosa sono le variabili logiche
+    <LI> Cosa sono e come si combinano le variabili logiche
+    <LI> Uguaglianza e identità di due oggetti
     <LI> Come prendere decisioni in un programma: if - (then) - else 
     <LI> Come operare su sequenze: for e while loop
     <LI> Come interrompere un loop    
@@ -14598,7 +14599,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.1-Valori-logici">4.1 Valori logici<a class="anchor-link" href="#4.1-Valori-logici">&#182;</a></h2><p>Python ha due oggetti built-in che hanno i valori logici <code>True</code> e <code>False</code>:</p>
+<h2 id="4.1-Valori-logici-o-variabili-di-Boole.">4.1 Valori logici o variabili di Boole.<a class="anchor-link" href="#4.1-Valori-logici-o-variabili-di-Boole.">&#182;</a></h2><p>Python ha due oggetti built-in che hanno i valori logici <code>True</code> e <code>False</code>:</p>
 
 </div>
 </div>
@@ -14861,7 +14862,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nel codice si ha spesso la necessità di valutare delle espressioni che possono essere vere oppure false (Talvolta dette “predicati”). Gli operatori <code>==</code>, <code>!=</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> servono a confrontare i valori di due oggetti.
+<h2 id="4.2-Uguaglianza-e-identit%C3%A0.">4.2 Uguaglianza e identit&#224;.<a class="anchor-link" href="#4.2-Uguaglianza-e-identit%C3%A0.">&#182;</a></h2><p>Nel codice si ha spesso la necessità di valutare delle espressioni che possono essere vere oppure false (Talvolta dette “predicati”). Gli operatori <code>==</code>, <code>!=</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code> servono a confrontare i <em>valori</em> di due oggetti.
 Restituiscono <code>True</code> oppure <code>False</code>.
 Per esempio:</p>
 
@@ -14988,12 +14989,60 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div style= 'padding:20px 20px 0px 150px;'>
-    <img src="../Humour/ComparisonOperators.jpg" width="400" align="center"/>
+<p>Non è necessario che i due oggetti siano dello stesso tipo. Per esempio:</p>
+
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15001,7 +15050,7 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I test logici possono essere combinati con <code>and</code> <code>or</code> e <code>not</code></p>
+<p>I test logici possono essere combinati con <code>and</code> <code>or</code> e <code>not</code>:</p>
 
 </div>
 </div>
@@ -15033,7 +15082,93 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.2-If-then-else">4.2 If-then-else<a class="anchor-link" href="#4.2-If-then-else">&#182;</a></h2><p>La costruzione <code>if</code> permette di eseguire del codice in modo condizionato. Dopo la parola chiave <code>if</code> deve essere presente una <em>condizione</em> seguita da due punti (<code>:</code>). Nella riga successiva inizia un nuovo blocco di comandi (che quindi deve essere indentato!) che viene eseguito se la condizione è True.</p>
+<p>Per verificare se due oggetti sono identici, ovvero se puntano alla stessa locazione di memoria, possiamo usare l'operatore <code>is</code>;</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Alternativamente possiamo confrontare gli <code>id</code> dei due oggetti:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div style= 'padding:20px 20px 0px 150px;'>
+    <img src="../Humour/ComparisonOperators.jpg" width="400" align="center"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="4.3-If-then-else">4.3 If-then-else<a class="anchor-link" href="#4.3-If-then-else">&#182;</a></h2><p>La costruzione <code>if</code> permette di eseguire del codice in modo condizionato. Dopo la parola chiave <code>if</code> deve essere presente una <em>condizione</em> seguita da due punti (<code>:</code>). Nella riga successiva inizia un nuovo blocco di comandi (che quindi deve essere indentato!) che viene eseguito se la condizione è True.</p>
 
 </div>
 </div>
@@ -15214,7 +15349,7 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.3-For-loop">4.3 For loop<a class="anchor-link" href="#4.3-For-loop">&#182;</a></h2><p>I <code>for</code>-loop permettono di iterare su una sequenza (per esempio una stringa o una lista). Ecco un esempio:</p>
+<h2 id="4.4-For-loop">4.4 For loop<a class="anchor-link" href="#4.4-For-loop">&#182;</a></h2><p>I <code>for</code>-loop permettono di iterare su una sequenza (per esempio una stringa o una lista). Ecco un esempio:</p>
 
 </div>
 </div>
@@ -15477,7 +15612,7 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.3.1-Loop-concatenati-e-list-comprehension">4.3.1 Loop concatenati e list comprehension<a class="anchor-link" href="#4.3.1-Loop-concatenati-e-list-comprehension">&#182;</a></h3>
+<h3 id="4.4.1-Loop-concatenati-e-list-comprehension">4.4.1 Loop concatenati e list comprehension<a class="anchor-link" href="#4.4.1-Loop-concatenati-e-list-comprehension">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15573,7 +15708,7 @@ Per esempio:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.4-While-loop">4.4 While loop<a class="anchor-link" href="#4.4-While-loop">&#182;</a></h2><p>La parola chiave <code>while</code> permette di ripetere una operazione mentre una condizione è vera. Dopo la parola chiave <code>while</code> deve essere presente una condizione seguita da due punti (:). Nella riga successiva inizia un nuovo blocco di comandi (che quindi deve essere indentato!) che viene eseguito se la condizione è True.<BR>
+<h2 id="4.5-While-loop">4.5 While loop<a class="anchor-link" href="#4.5-While-loop">&#182;</a></h2><p>La parola chiave <code>while</code> permette di ripetere una operazione mentre una condizione è vera. Dopo la parola chiave <code>while</code> deve essere presente una condizione seguita da due punti (:). Nella riga successiva inizia un nuovo blocco di comandi (che quindi deve essere indentato!) che viene eseguito se la condizione è True.<BR>
 Supponiamo di voler sapere per quanti anni è necessario tenere 100 euro in un conto bancario per arrivare a 200 euro grazie ad un interesse del 5% annuo. Ecco un programma che lo calcola:</p>
 
 </div>
@@ -15699,7 +15834,7 @@ Esempi:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.5-Come-filtrare-una-lista/ntupla/dizionario-con-if">4.5 Come filtrare una lista/ntupla/dizionario con <code>if</code><a class="anchor-link" href="#4.5-Come-filtrare-una-lista/ntupla/dizionario-con-if">&#182;</a></h2><p>Spesso è necessario estrarre da una lista gli elementi che soddisfano una certa condizione. Lo si può ottenere con un <code>if</code> <em>all'interno</em> della definizione della lista:</p>
+<h2 id="4.6-Come-filtrare-una-lista/ntupla/dizionario-con-if">4.6 Come filtrare una lista/ntupla/dizionario con <code>if</code><a class="anchor-link" href="#4.6-Come-filtrare-una-lista/ntupla/dizionario-con-if">&#182;</a></h2><p>Spesso è necessario estrarre da una lista gli elementi che soddisfano una certa condizione. Lo si può ottenere con un <code>if</code> <em>all'interno</em> della definizione della lista:</p>
 
 </div>
 </div>
@@ -15942,7 +16077,7 @@ Esempi:
 <LI>Costruite la lista <b>L7</b> dei numeri interi positivi divisibili per 7 e minori di 200. Costruite la lista <b>L7_3</b> degli elementi di <b>L7</b>  che sono anche divisibili per 3.
 <LI>Costruite la lista <b>L</b> del seno degli angoli $\theta_i = 2 \pi /100 * i$ per $i = 0,1,2,\cdots ,100$. Costruite la lista degli elementi di <b>L</b> compresi fra -0.3 e 0.2. 
 <LI>Costruite la lista <b>L1</b> degli angoli $\theta_i = 2 \pi /100 * i$ per $i = 0,1,2,\cdots ,100$ il cui seno è compreso fra -0.3 e 0.2. 
-<LI>Estraete da L0 = "Tutte le famiglie felici si assomigliano fra loro, ogni famiglia infelice è infelice a suo modo".split() la lista delle parole che iniziano con una vocale. Suggerimento: definite la variabile vocali = "aeiouAEIOU" e sfruttate la keyword <b>in</b>.
+<LI>Estraete da:<BR> L0 = "Tutte le famiglie felici si assomigliano fra loro, ogni famiglia infelice è infelice a suo modo".split() <BR>la lista delle parole che iniziano con una vocale. Suggerimento: definite la variabile vocali = "aeiouAEIOU" e sfruttate la keyword <b>in</b>.
 </OL>
 </div>
 </div>
@@ -15955,7 +16090,7 @@ Esempi:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.6-Interrompere-un-loop">4.6 Interrompere un loop<a class="anchor-link" href="#4.6-Interrompere-un-loop">&#182;</a></h2>
+<h2 id="4.7-Interrompere-un-loop">4.7 Interrompere un loop<a class="anchor-link" href="#4.7-Interrompere-un-loop">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -16055,7 +16190,7 @@ Esempi:
 <div style = "width:95%; padding:5px 10px 5px; border-style:solid; border-width:0px 0px 0px 10px; border-color:#b8d0d0; margin:20px 0px 10px 10px">
     <h4> Imparare Facendo</h4>
 <OL>
-<LI>Assegnate alla variabile <b>L0</b> la lista [4,7,2,-1,3,6]. Esaminate la stringa elemento per elemento fermandovi al primo elemento negativo e facendo stampare il messaggio 'il primo elemento negativo è {XX}. Il suo indice è {YY}', dove XX e YY sono il valore e l'indice del primo elemento negativo. 
+<LI>Assegnate alla variabile <b>L0</b> la lista [4,7,2,-1,3,6]. Esaminate la lista elemento per elemento fermandovi al primo elemento negativo e facendo stampare il messaggio 'il primo elemento negativo è {XX}. Il suo indice è {YY}', dove XX e YY sono il valore e l'indice del primo elemento negativo. 
 
 <LI>Costruite una funzione <b>no_digit(S0)</b> che elimini dalls stringa <b>S0</b> tutte le cifre. Usate un ciclo <b>for</b> e la keyword <b>continue</b>.
     È utile introdurre la variable, di tipo stringa, cifre="0123456789".

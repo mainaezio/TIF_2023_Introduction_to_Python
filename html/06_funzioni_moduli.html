@@ -14736,7 +14736,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="6.2-Valori-di-default-e-parametri-opzionali">6.2 Valori di default e parametri opzionali<a class="anchor-link" href="#6.2-Valori-di-default-e-parametri-opzionali">&#182;</a></h2><p>Python permette di definire valori di <em>default</em> per gli argomenti di una funzione. Ecco un esempio: la funzione <code>myfunc</code> prende tre argomenti: <code>x</code>, <code>p</code> e <code>debug</code>. Il primo argomento <code>x</code> è una variabile “posizionale”; deve essere presente nella chiamata alla funzione. Il secondo argomento <code>p</code> ha il valore di default 2, il terzo <code>debug</code> ha come valore di default False. Questi argomenti sono opzionali: se l'utente chiama questa funzione con un solo argomento, l'argomento viene assegnato a <code>x</code> mentre <code>p</code> e <code>debug</code> assumeranno i valori di default. Se vengono forniti due argomenti (senza nome) il primo viene assegnato a <code>x</code> e il secondo a <code>p</code> mentre <code>debug</code> assumera il valore di default e così via. Il modo migliore di usare i parametri di default è quello di utilizzare espicitamente la keyword che li individua. In questo modo non è necessario ripettare l'ordine degli argomenti.</p>
+<h2 id="6.2-Valori-di-default-e-parametri-opzionali">6.2 Valori di default e parametri opzionali<a class="anchor-link" href="#6.2-Valori-di-default-e-parametri-opzionali">&#182;</a></h2><p>Python permette di definire valori di <em>default</em> per gli argomenti di una funzione. Ecco un esempio: la funzione <code>myfunc</code> prende tre argomenti: <code>x</code>, <code>p</code> e <code>debug</code>. Il primo argomento <code>x</code> è una variabile “posizionale”; deve essere presente nella chiamata alla funzione. Il secondo argomento <code>p</code> ha il valore di default 2, il terzo <code>debug</code> ha come valore di default False. Questi argomenti sono opzionali: se l'utente chiama questa funzione con un solo argomento, l'argomento viene assegnato a <code>x</code> mentre <code>p</code> e <code>debug</code> assumeranno i valori di default. Se vengono forniti due argomenti (senza nome) il primo viene assegnato a <code>x</code> e il secondo a <code>p</code> mentre <code>debug</code> assumera il valore di default e così via. Quindi &egrave; possibile passare un parametro opzionale senza utilizzare la keyword, tuttavia il modo migliore e pi&ugrave; comprensibile di usare i parametri di default è quello di utilizzare espicitamente la keyword che li individua. In questo modo non è necessario ripettare l'ordine degli argomenti.</p>
 
 </div>
 </div>
@@ -14914,6 +14914,29 @@ si ha un errore quando la funzione viene caricata in memoria:</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Per esempio <code>help(print)</code> restituisce:</p>
+
+</div>
+</div>
+</div>
+</div>Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="6.3-Funzioni-con-un-numero-variabile-di-argomenti:-*args-e-**kwargs">6.3 Funzioni con un numero variabile di argomenti: <code>*args</code> e <code>**kwargs</code><a class="anchor-link" href="#6.3-Funzioni-con-un-numero-variabile-di-argomenti:-*args-e-**kwargs">&#182;</a></h2>
 </div>
 </div>
@@ -15080,6 +15103,37 @@ da <code>*en2_rest</code>. La variabile <code>en2_rest</code> (senza <code>*</co
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">, b = </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>L'operatore <code>*</code> permette anche di unire facilmente sequenze:</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="mf">7.3</span><span class="p">,</span><span class="mf">8.1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="o">*</span><span class="n">b</span><span class="p">]</span>
+<span class="n">c</span>
 </pre></div>
 
      </div>
@@ -16498,7 +16552,7 @@ file contenente un modulo contenga anche un programma principale all'interno del
     <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes5</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">p</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16531,7 +16585,7 @@ file contenente un modulo contenga anche un programma principale all'interno del
 
 <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">primes5</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">p</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
